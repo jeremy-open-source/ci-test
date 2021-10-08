@@ -1,0 +1,15 @@
+services:
+  - docker:dind
+
+variables:
+  MESSAGE: "Hello World!"
+
+stages:
+  - message
+
+message:
+  retry: 2
+  image: ubuntu:20.04
+  stage: message
+  script:
+    - echo "${MESSAGE}"
