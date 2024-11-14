@@ -9,7 +9,7 @@ stages:
 
 message:
   retry: 2
-  image: ubuntu:20.04
+  image: ubuntu:latest
   stage: message
   script:
     - echo "${MESSAGE}"
